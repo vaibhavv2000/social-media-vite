@@ -11,7 +11,7 @@ interface props {
 };
 
 const useQueryAPI = (props: props) => {
- const {defaultFetch = false, defaultURL = false, onSuccess, onError, endpoint} = props;
+ const {defaultFetch = false, onSuccess, onError, endpoint} = props;
  const {clearError} = props;
  
  const [loading, setLoading] = useState(false);

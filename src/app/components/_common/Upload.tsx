@@ -4,7 +4,6 @@ import {HiOutlineXMark} from "react-icons/hi2";
 import {BsFillEmojiHeartEyesFill,BsFillCameraVideoFill,BsImageFill} from "react-icons/bs";
 import {addImage,editStatus,toggleUpload,updatePost,addPost} from "../../redux/postSlice";
 import {API} from "../../lib/API";
-import {gql} from "@apollo/client";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import uuid from "../../utils/uuid";
 import {showAlert} from "../../redux/utilsSlice";
@@ -12,22 +11,6 @@ import {post} from "../../utils/types";
 import AccountImage from "../../assests/images/account.jpg";
 
 let opt = "flex justify-evenly items-center border border-gray-400 dark:border-white/80 rounded-2xl p-1.5 px-2 cursor-pointer space-x-1.5 hover:bg-primary hover:text-white";
-
-const ADD_POST = gql`
- mutation AddPost($status: String, $photo: String) {
-  add_post(status: $status, photo: $photo) {
-   post
-  }
- }
-`;
-
-const EDIT_POST = gql`
- mutation EditPost($postId: ID!, $status: String, $photo: String) {
-  edit_post(postId: $postId, status: $status, photo: $photo) {
-   msg
-  }
- }
-`;
 
 const Upload = () => {
  const [file,setFile] = useState<null | Blob>();

@@ -11,7 +11,7 @@ interface props {
 };
 
 const useMutationAPI = (props: props) => {
- const {defaultURL = false, onSuccess, onError, endpoint} = props;
+ const {onSuccess, onError, endpoint} = props;
  const {clearError, method = "post"} = props;
  
  const [loading, setLoading] = useState(false);

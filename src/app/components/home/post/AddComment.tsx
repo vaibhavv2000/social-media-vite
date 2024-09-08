@@ -18,7 +18,7 @@ const AddComment = ({postId}: {postId: number}) => {
  const dispatch = useAppDispatch();
  const {user} = useAppSelector(state => state.user)
 
- const [postComment,{data}] = useMutation(COMMENT_POST,{
+ const [postComment] = useMutation(COMMENT_POST,{
   onCompleted: ({commentPost}) => {
    dispatch(addComment({...commentPost, username: user.username}));
   }  

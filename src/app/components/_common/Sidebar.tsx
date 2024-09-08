@@ -1,7 +1,6 @@
 import {AiOutlinePlus} from "react-icons/ai";
 import {MdSunny} from "react-icons/md";
 import {GiNightSleep} from "react-icons/gi";
-import {BiMessageSquare} from "react-icons/bi";
 import {IoEarthOutline, IoSettingsOutline} from "react-icons/io5";
 import {type NavigateFunction,useNavigate, useParams} from "react-router-dom";
 import {toggleUpload} from "../../redux/postSlice";

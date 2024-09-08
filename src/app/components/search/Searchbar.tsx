@@ -1,20 +1,11 @@
 import {useEffect,useRef,useState} from "react";
 import {IoSearchOutline} from "react-icons/io5";
 import {HiXMark} from "react-icons/hi2";
-import {gql,useLazyQuery} from "@apollo/client";
 import People from "../home/People";
 import {API} from "../../lib/API";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {showAlert} from "../../redux/utilsSlice";
-import {type Users, setUsers} from "../../redux/userSlice";
-
-const FETCH_USERS = gql`
- query Getusers($query: String) {
-  getRecommendedUsers(query: $query) {
-   id name username profile
-  }
- }
-`;
+import {setUsers} from "../../redux/userSlice";
 
 const Searchbar = () => {
  const [query,setQuery] = useState<string>("");
@@ -22,8 +13,6 @@ const Searchbar = () => {
 
  const inputRef = useRef<HTMLInputElement>(null);
  const dispatch = useAppDispatch();
-
- const [searchUsers,{data}] = useLazyQuery(FETCH_USERS);
 
  useEffect(() => {
   inputRef.current && inputRef.current.focus();

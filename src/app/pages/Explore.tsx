@@ -1,4 +1,3 @@
-import {gql,useLazyQuery} from "@apollo/client";
 import {useState,useEffect,useRef} from "react";
 import ExplorePosts from "../components/explore/ExplorePosts";
 import Loader from "../components/_common/Loader";
@@ -7,14 +6,6 @@ import {Fragment} from "react";
 import {useAppDispatch} from "../hooks/redux";
 import {showAlert} from "../redux/utilsSlice";
 
-const EXPLORE_POSTS = gql`
- query getExplorePosts($skip: Int) {
-  getRandomPhotos(explore: true, skip: $skip) {
-   photo postId likes comments
-  }
- }
-`;
-
 const Explore = () => {
  const [skip, setSkip] = useState<number>(0);
  const [posts, setPosts] = useState<any[]>([]);
@@ -22,16 +13,9 @@ const Explore = () => {
 
  const dispatch = useAppDispatch();
 
- const postRef = useRef<HTMLDivElement>(null)
-
- const [fetchPosts,{data}] = useLazyQuery(EXPLORE_POSTS);
+ const postRef = useRef<HTMLDivElement>(null);
 
  useEffect(() => {
-  const getPosts = async () => {
-   await fetchPosts({variables: {skip}});
-   data && setPosts(data.getRandomPhotos);
-  };
-
   document.title = `Explore posts from people`;
  },[]);
 
