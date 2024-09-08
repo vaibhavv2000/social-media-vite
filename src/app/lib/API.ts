@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const dev = true;
+const dev = false;
 let local = "http://localhost:9000";
 const prod = `https://social-media-server-7z5e.onrender.com`;
 
