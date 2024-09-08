@@ -1,7 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useAppSelector} from "../../hooks/redux";
 import Post from "../home/Post";
-import {useState} from "react";
 import type {post} from "../../utils/types";
 
 interface props {
@@ -13,7 +12,7 @@ const Posts = ({data}: props) => {
  const {user} = useAppSelector(state => state.user);
  const userPosts = timelinePosts.filter(item => String(item.userId) === String(user.id));
  const {username} = useParams();
- const [posts, setPosts] = useState(user.username === username ? userPosts : data);
+ const posts = user.username === username ? userPosts : data
 
  const NoPosts = (
   <div className="grid place-items-center h-full">
