@@ -6,4 +6,4 @@
 
 # Github Link - https://github.com/vaibhavv2000/social-media-vite
 
-# Official website - https://social-media-client-148u.onrender.com
+# Official website - https://social-media-client-gy8x.onrender.com
