@@ -10,8 +10,6 @@ import {showAlert} from "../../redux/utilsSlice";
 import {post} from "../../utils/types";
 import AccountImage from "../../assests/images/account.jpg";
 
-let opt = "flex justify-evenly items-center border border-gray-400 dark:border-white/80 rounded-2xl p-1.5 px-2 cursor-pointer space-x-1.5 hover:bg-primary hover:text-white";
-
 const Upload = () => {
  const [file,setFile] = useState<null | Blob>();
 
@@ -123,7 +121,7 @@ const Upload = () => {
     </div>
 
     <div className="flex justify-evenly px-2 pb-2 space-x-3 items-center">
-     <div className={opt}>
+     <div className={"upload-option"}>
       <span className="dark:text-white">
        <BsFillEmojiHeartEyesFill size={16} />
       </span>
@@ -131,7 +129,7 @@ const Upload = () => {
        Emoji
       </span>
      </div>
-     <div className={opt}>
+     <div className={"upload-option"}>
       <span className="dark:text-white">
        <AiFillAudio size={16} />
       </span>
@@ -139,7 +137,7 @@ const Upload = () => {
        Audio
       </span>
      </div>
-     <div className={opt}>
+     <div className={"upload-option"}>
       <span className="dark:text-white">
        <BsFillCameraVideoFill size={16} />
       </span>
@@ -155,7 +153,7 @@ const Upload = () => {
       accept="images/*"
       multiple={false}
      />
-     <label htmlFor="imgFile" className={opt}>
+     <label htmlFor="imgFile" className={"upload-option"}>
       <span className="dark:text-white">
         <BsImageFill size={16} />
       </span>

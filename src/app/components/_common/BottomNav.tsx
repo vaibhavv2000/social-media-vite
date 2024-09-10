@@ -7,8 +7,6 @@ import {FaRegSquarePlus} from "react-icons/fa6";
 import {IoEarthOutline} from "react-icons/io5";
 import AccountImage from "../../assests/images/account.jpg";
 
-let link = 'grid h-full flex-1 place-items-center cursor-pointer';
-
 const BottomNav = () => {
  const navigate: NavigateFunction = useNavigate();
  const dispatch = useAppDispatch();
@@ -18,19 +16,19 @@ const BottomNav = () => {
 
  return (
   <nav className='fixed md:!hidden flex justify-evenly bg-white w-full bottom-0 dark:bg-black left-0 border-t border-gray-200 dark:border-transparent py-4 dark:text-white'>
-   <div className={link} onClick={() => nav("/")}>
+   <div className="bottom-link" onClick={() => nav("/")}>
     <FiHome size={20} />
    </div>
-   <div className={link} onClick={() => nav("/search")}>
+   <div className="bottom-link" onClick={() => nav("/search")}>
     <LuSearch size={20} />
    </div>
-   <div className={link} onClick={() => dispatch(toggleUpload())}>
+   <div className="bottom-link" onClick={() => dispatch(toggleUpload())}>
     <FaRegSquarePlus size={20} />
    </div>
-   <div className={link} onClick={() => nav("/explore")}>
+   <div className="bottom-link" onClick={() => nav("/explore")}>
     <IoEarthOutline size={20} />
    </div>
-   <div className={link} onClick={() => nav(`/profile/${user?.username}`)}>
+   <div className="bottom-link" onClick={() => nav(`/profile/${user?.username}`)}>
     <img
      className="h-5 w-5 rounded-full"
      alt={user.username}

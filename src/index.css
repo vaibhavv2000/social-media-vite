@@ -14,3 +14,33 @@
 body {
  font-family: "DM Sans", sans-serif;
 }
+
+@layer components {
+ .bottom-link {
+  @apply grid h-full flex-1 place-items-center cursor-pointer;
+ }
+
+ .upload-option {
+  @apply flex justify-evenly items-center border border-gray-400 dark:border-white/80 rounded-2xl p-1.5 px-2 cursor-pointer space-x-1.5 hover:bg-primary hover:text-white;
+ }
+
+ .link {
+  @apply flex items-center justify-center lg:justify-start space-x-4 hover:bg-gray-50 cursor-pointer p-2 py-3 my-3 rounded-tr-[28px] rounded-br-[28px] lg:pl-5 dark:hover:bg-[rgba(255,255,255,0.09999)];
+ }
+
+ .link-name {
+  @apply hidden lg:!inline font-medium dark:text-white;
+ }
+
+ .settings-link {
+  @apply flex items-center space-x-4 hover:bg-gray-50 cursor-pointer p-3 dark:hover:bg-[rgba(255,255,255,0.09999)] duration-500 rounded-full;
+ }
+
+ .settings-link-name {
+  @apply dark:text-white text-[15px] font-medium;
+ }
+
+ .update-input {
+  @apply outline-none p-3 border-b min-w-[260px] border-gray-300 dark:bg-[#0f0f0f] dark:text-white;
+ }
+}

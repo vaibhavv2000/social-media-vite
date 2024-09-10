@@ -4,8 +4,6 @@ import {login} from "../../redux/userSlice";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {showAlert} from "../../redux/utilsSlice";
 
-let input = "outline-none p-3 border-b min-w-[260px] border-gray-300 dark:bg-[#0f0f0f] dark:text-white";
-
 const UPDATE_USER = gql`
  mutation UserUpdate(
   $name: String
@@ -79,7 +77,7 @@ const UpdateProfile = (): JSX.Element => {
       value={name}
       name="name"
       onChange={handleChange}
-      className={input}
+      className={"update-input"}
      />
     </div>
     {/*  */}
@@ -89,7 +87,7 @@ const UpdateProfile = (): JSX.Element => {
       value={username}
       name="username"
       onChange={handleChange}
-      className={input}
+      className={"update-input"}
      />
     </div>
     {/*  */}
@@ -99,14 +97,14 @@ const UpdateProfile = (): JSX.Element => {
       value={email}
       name="email"
       onChange={handleChange}
-      className={input}
+      className={"update-input"}
      />
     </div>
     {/*  */}
     <div className="flex items-start space-x-5">
      <label className="w-20 mt-2 dark:text-white">Bio:</label>
      <textarea
-      value={bio || ""}
+      value={bio}
       name="bio"
       onChange={handleChange}
       className="outline-none p-2 border-b border-gray-300 resize-none dark:bg-[#0f0f0f] dark:text-white w-[235px] h-24"
@@ -116,20 +114,20 @@ const UpdateProfile = (): JSX.Element => {
     <div className="flex items-center space-x-5">
      <label className="w-20 dark:text-white">Profile:</label>
      <input
-      value={profile || ""}
+      value={profile}
       name="profile"
       onChange={handleChange}
-      className={input}
+      className={"update-input"}
      />
     </div>
     {/*  */}
     <div className="flex items-center space-x-5">
      <label className="w-20 dark:text-white">Cover:</label>
      <input
-      value={cover || ""}
+      value={cover}
       name="cover"
       onChange={handleChange}
-      className={input}
+      className={"update-input"}
      />
     </div>
     {/*  */}

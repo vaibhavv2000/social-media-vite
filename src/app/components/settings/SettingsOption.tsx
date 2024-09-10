@@ -11,10 +11,6 @@ import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {showAlert} from "../../redux/utilsSlice";
 import useMutationAPI from "../../hooks/useMutationAPI";
 
-let link = "flex items-center space-x-4 hover:bg-gray-50 cursor-pointer p-3 dark:hover:bg-[rgba(255,255,255,0.09999)] duration-500 rounded-full";
-
-let name = "dark:text-white text-[15px] font-medium";
-
 const SettingsOption = () => {
  const [showDel,setShowDel] = useState<boolean>(false);
  const {isDarkMode} = useAppSelector(state => state.user);
@@ -44,60 +40,60 @@ const SettingsOption = () => {
    <h1 className="text-xl px-4 md:text-2xl dark:text-white font-bold my-2">Settings</h1>
    <div className="p-1">
     {/*  */}
-    <div className={link} onClick={() => navigate(`/settings/update`)}>
+    <div className={"settings-link"} onClick={() => navigate(`/settings/update`)}>
      <span className="dark:text-white">
       <MdOutlineAccountCircle size={20} />
      </span>
-     <span className={name}>Edit Profile</span>
+     <span className={"settings-link-name"}>Edit Profile</span>
     </div>
     {/*  */}
     {/*  */}
-    <div className={link}>
+    <div className={"settings-link"}>
      <span className="dark:text-white">
       <AiOutlineSecurityScan size={20} />
      </span>
-     <span className={name}>Security</span>
+     <span className={"settings-link-name"}>Security</span>
     </div>
     {/*  */}
-    <div className={link}>
+    <div className={"settings-link"}>
      <span className="dark:text-white">
       <MdOutlineGroups3 size={20} />
      </span>
-     <span className={name}>Groups</span>
+     <span className={"settings-link-name"}>Groups</span>
     </div>
     {/*  */}
-    <div className={link}>
+    <div className={"settings-link"}>
      <span className="dark:text-white">
       <RiPagesLine size={20} />
      </span>
-     <span className={name}>Pages</span>
+     <span className={"settings-link-name"}>Pages</span>
     </div>
     {/*  */}
     {/*  */}
-    <div className={link} onClick={() => navigate("/bookmarks")}>
+    <div className={"settings-link"} onClick={() => navigate("/bookmarks")}>
      <span className="dark:text-white">
       <MdOutlineBookmarkBorder size={20} />
      </span>
-     <span className={name}>Bookmarks</span>
+     <span className={"settings-link-name"}>Bookmarks</span>
     </div>
     {/*  */}
     {/*  */}
-    <div className={link}>
+    <div className={"settings-link"}>
      <span className="dark:text-white">
       <BsStar size={20} />
      </span>
-     <span className={name}>Featured</span>
+     <span className={"settings-link-name"}>Featured</span>
     </div>
     {/*  */}
-    <div className={link}>
+    <div className={"settings-link"}>
      <span className="dark:text-white">
       <MdInfoOutline size={20} />
      </span>
-     <span className={name}>About Us</span>
+     <span className={"settings-link-name"}>About Us</span>
     </div>
 
     <div 
-     className={`${link} lg:hidden`} 
+     className={`${"settings-link"} lg:hidden`} 
      onClick={() => dispatch(updateDarkMode(!isDarkMode))}
     >
      <span className="cursor-pointer">
@@ -105,7 +101,7 @@ const SettingsOption = () => {
        <GiNightSleep size={20} color="gold" />
       )}
      </span>
-     <span className={name}>
+     <span className={"settings-link-name"}>
       {isDarkMode ? "Dark Mode" : "Light Mode"}
      </span>
     </div>
@@ -115,20 +111,20 @@ const SettingsOption = () => {
      <hr />
     </div>
     {/*  */}
-    <div className={`${link} hover:!bg-blue-500 hover:!text-white`} onClick={mutator}>
+    <div className={`${"settings-link"} hover:!bg-blue-500 hover:!text-white`} onClick={mutator}>
      <span className="dark:text-white">
       <RiLogoutCircleRLine size={20} />
      </span>
-     <span className={name}>Logout</span>
+     <span className={"settings-link-name"}>Logout</span>
     </div>
     {/*  */}
     <div 
-     className={`${link} hover:!bg-red-600 hover:!text-white`} 
+     className={`${"settings-link"} hover:!bg-red-600 hover:!text-white`} 
      onClick={() => setShowDel(true)}>
      <span className="dark:text-white">
       <RiDeleteBin6Line size={20} />
      </span>
-     <span className={name}>Delete Account</span>
+     <span className={"settings-link-name"}>Delete Account</span>
     </div>
     {/*  */}
     {/* delete */}
