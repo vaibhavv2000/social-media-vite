@@ -2,8 +2,8 @@
 
 # Tech Stack includes React, Typescript, Tailwind, Redux, GraphQL
 
-# This app is hosted on render.com
+# This app is hosted on render and vercel
 
 # Github Link - https://github.com/vaibhavv2000/social-media-vite
 
-# Official website - https://social-media-client-gy8x.onrender.com
+# Official websites - [https://socio-three-mu.vercel.app, https://social-media-client-gy8x.onrender.com]
