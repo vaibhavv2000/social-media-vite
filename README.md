@@ -6,4 +6,6 @@
 
 # Github Link - https://github.com/vaibhavv2000/social-media-vite
 
-# Official websites - [https://socio-three-mu.vercel.app, https://social-media-client-gy8x.onrender.com]
+# Official website - [https://social-media-client-gy8x.onrender.com, https://socio-three-mu.vercel.app]
+
+# You can contact me at vaibhavk1965@gmail.com or 9975564393 for any query or further process
